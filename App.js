@@ -5,10 +5,14 @@
  import {Provider} from './src/context/BlogContext';
  import ShowScreen from "./src/screens/ShowScreen";
  import CreateScreen from './src/screens/CreateScreen';
+import EditScreen from "./src/screens/EditScreen";
+
+
  const navigator=createStackNavigator({
   Index:IndexScreens,
   Show:ShowScreen,
-  Create:CreateScreen
+  Create:CreateScreen,
+  Edit: EditScreen
 
  },
  {

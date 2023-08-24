@@ -3,11 +3,10 @@ import { Text,View,StyleSheet,FlatList, Button,TouchableOpacity } from "react-na
 import {Context} from "../context/BlogContext";
 import { Feather } from '@expo/vector-icons';
 const IndexScreens=({navigation})=>{
-    const {state,addBlogPost,deleteBlogPost}=useContext(Context)
+    const {state,deleteBlogPost}=useContext(Context)
 
     return (
         <View>
-            <Button title="Add- Blog" onPress={addBlogPost} />
             <FlatList 
               data={state}
               keyExtractor={(blogPost)=>blogPost.title}
@@ -32,11 +31,11 @@ IndexScreens.navigationOptions=({navigation})=>{
   return {
     headerRight:()=>(<TouchableOpacity 
       onPress={()=>navigation.navigate('Create')}>
-      <Feather name="plus" size={30}/>
+      <Feather name="plus" size={35}/>
       </TouchableOpacity>
     )
   }
-}
+} 
 const styles=StyleSheet.create({
   row:{
     flexDirection:'row',
